@@ -1,0 +1,1 @@
+start pythonw .\hotword_detection.pyw
