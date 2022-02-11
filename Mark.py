@@ -71,6 +71,8 @@ def MainTasks():
                 pyautogui.hotkey('ctrl','shift','i')
             elif('full screen' in comm):
                 pyautogui.press('f11')
+            elif('close' in comm):
+                pyautogui.hotkey('ctrl','w')
             elif('exit' in comm):
                 Say('closing chrome automation')
                 break
@@ -81,7 +83,7 @@ def MainTasks():
             comm = Listen()
             if('play' in comm or 'pause' in comm):
                 pyautogui.press('k')
-            elif('mute' in comm):
+            elif('mute' in comm or 'unmute' in comm):
                 pyautogui.press('m')
             elif('fullscreen' in comm):
                 pyautogui.press('f11')
@@ -94,7 +96,7 @@ def MainTasks():
         if("sleep" in query):
             Say("Okay sir....")
             Say('Just say Wake up to wake me up')
-            Say('Mark is offline!!')
+            Say('Mark is offline')
             break
         elif("hello" in query):
             Say("Hello sir!")
@@ -190,5 +192,20 @@ def MainTasks():
                     ps(".\\ringtone.mp3")
                 elif now>time:
                     break
-
+        elif('new window' in query):
+                pyautogui.hotkey('ctrl','n')
+        elif('new tab' in query):
+                pyautogui.hotkey('ctrl','t')
+        elif('reopen' in query):
+                pyautogui.hotkey('ctrl','shift','t')
+        elif('devloper' in query):
+                pyautogui.hotkey('ctrl','shift','i')
+        elif('full screen' in query):
+                pyautogui.press('f11')
+        elif('close' in query):
+                pyautogui.hotkey('ctrl','w')
+        elif('play' in query or 'pause' in query):
+                pyautogui.press('k')
+        elif('mute' in query or 'unmute' in query):
+                pyautogui.press('m')
 MainTasks()
