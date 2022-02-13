@@ -1,8 +1,29 @@
-# Story Of MARK
+<h1 align="center">Welcome to mark X 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-Mark was developed when we, Rohan Kumar and Aarush Tayal, Decided we no longer wanna use cortona cuz it sucks
-We Decided that as there is no cool assistant, LET'S MAKE OUR OWN
+> A ai assistant
+## Install
 
-Currently Mark is in beta and u will need to extract the zip file and install all modules
+```sh
+pip install pyttsx3 SpeechRecognition pyaudio flask webbrowser pywhatkit wikipidea pyautogui os pyjokes pydictionary datetime playsound pywin32
+```
 
-We are planning to make it as an .exe file so be tuned
+## Usage
+
+```sh
+python Mark.py #for direct launce
+```
+OR
+```sh
+Mark.bat #for hotword detection
+```
+## Author
+
+👤 **Rohan Kumar** , **Aarush tayal**
+* Github: [@rohanCoderMan](https://github.com/rohanCoderMan)
+* Github: [@Aarusht](https://github.com/Aarusht)
+## Show your support
+
+Give a ⭐️ if this project helped you!
