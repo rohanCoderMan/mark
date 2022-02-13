@@ -13,7 +13,7 @@ pip install pyttsx3 SpeechRecognition pyaudio flask webbrowser pywhatkit wikipid
 ## Usage
 
 ```sh
-python Mark.py #for direct launce
+python Mark.py #for direct launch
 ```
 OR
 ```sh
