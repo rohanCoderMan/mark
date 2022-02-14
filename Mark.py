@@ -9,7 +9,10 @@ import pyjokes
 from PyDictionary import PyDictionary as dicti
 import datetime
 from playsound import playsound as ps
-
+import time as TiMeSus
+from pywikihow import search_wikihow
+import requests
+from bs4 import BeautifulSoup as BS
 
 # os.startfile('.\\Mark.bat')
 engine = pyttsx3.init('sapi5') 
@@ -136,7 +139,6 @@ def MainTasks():
             wiki = wikipedia.summary(query,2)
             Say(f'according to wikipidea:{wiki}')
         elif ('screenshot' in query):
-            pyautogui.hotkey('win','down')
             pyautogui.hotkey('win','shift','s')
         elif('open' in query):
             OpenApps(query)  
@@ -147,8 +149,6 @@ def MainTasks():
         elif('joke' in query):
             get = pyjokes.get_joke()
             Say(get)
-        elif('hello' in query):
-            Say('hello sir!')
         elif('where am i'in query):
             webbrowser.open('https://www.google.com/maps/')
         elif('meaning' in query):
@@ -179,19 +179,6 @@ def MainTasks():
 
             result = dicti.synonym(query)
             Say(f'the antonym of {query} is {result}')
-        elif('alarm' in query):
-            Say('enter the time (IN 24 hour)')
-            time = input('enter the time: ')
-
-            while True:
-                timeAc = datetime.datetime.now()
-                now = timeAc.strftime("%H:%M:%S")
-
-                if now == time:
-                    Say("alarm opening")
-                    ps(".\\ringtone.mp3")
-                elif now>time:
-                    break
         elif('new window' in query):
                 pyautogui.hotkey('ctrl','n')
         elif('new tab' in query):
@@ -208,4 +195,57 @@ def MainTasks():
                 pyautogui.press('k')
         elif('mute' in query or 'unmute' in query):
                 pyautogui.press('m')
+        elif('alarm' in query):
+            Say('enter the time (IN 24 hour)')
+            time = input('enter the time: ')
+
+            while True:
+                timeAc = datetime.datetime.now()
+                now = timeAc.strftime("%H:%M:%S")
+
+                if now == time:
+                    Say("alarm opening")
+                    ps(".\\ringtone.mp3")
+                elif now>time:
+                    break
+        elif('date'in query):
+            today = datetime.date.today()
+            day = today.strftime("%B %d, %Y")
+            Say(f"Today's date: {day}")
+        elif('time' in query):
+            now = datetime.datetime.now()
+            dt_string = now.strftime("%H:%M:%S")
+            Say(f"the time is: {dt_string}")
+        elif('how to'in query):
+            Say('Surfing the internet')
+            op = query.replace('Mark','')
+            op = query.replace('tell','')
+            op = query.replace('me','')
+            op = query.replace('how','')
+            op = query.replace('to','')
+            max_result = 1
+            how_to_func = search_wikihow(op , max_result)
+            assert len(how_to_func) == 1
+            Say(how_to_func[0].summary)
+        elif('what is'in query):
+            Say('Surfing the internet')
+            op = query.replace('Mark','')
+            op = query.replace('tell','')
+            op = query.replace('me','')
+            op = query.replace('what is','')
+            pywhatkit.search(op)
+        elif('who is'in query):
+            Say('Surfing the internet')
+            op = query.replace('Mark','')
+            op = query.replace('tell','')
+            op = query.replace('me','')
+            op = query.replace('who is','')
+            pywhatkit.search(op)           
+        elif('temperature' in query):
+            search =  'temperature'
+            url = f'https://www.google.com/search?q={search}'
+            r = requests.get(url)
+            data = BS(r.text , 'html.parser')
+            temp = data.find('div',class_ = 'BNeawe').text
+            Say(f'the temperature is {temp}')
 MainTasks()
