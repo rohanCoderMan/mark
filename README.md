@@ -34,6 +34,7 @@ pip install playsound
 
 pip install pywin32
 
+pip install pywikihow
 ```
 ## Usage
 
