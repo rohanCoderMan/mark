@@ -35,6 +35,8 @@ pip install playsound
 pip install pywin32
 
 pip install pywikihow
+
+pip install requests
 ```
 ## Usage
 
