@@ -6,10 +6,36 @@
 > A ai assistant
 ## Install
 
-```sh
-pip install pyttsx3 SpeechRecognition pyaudio flask webbrowser pywhatkit wikipidea pyautogui os pyjokes pydictionary datetime playsound pywin32
-```
+```sh 
+pip install pyttsx3
 
+pip install SpeechRecognition
+
+pip install pyaudio
+
+pip install flask
+
+pip install webbrowser
+
+pip install pywhatkit
+
+pip install wikipidea
+
+pip install pyautogui
+
+pip install os
+
+pip install pyjokes
+
+pip install pydictionary
+
+pip install datetime
+
+pip install playsound
+
+pip install pywin32
+
+```
 ## Usage
 
 ```sh
