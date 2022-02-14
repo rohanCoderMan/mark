@@ -16,8 +16,6 @@ pip install pyaudio
 
 pip install flask
 
-pip install webbrowser
-
 pip install pywhatkit
 
 pip install wikipidea
