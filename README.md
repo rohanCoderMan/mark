@@ -6,6 +6,7 @@
 > A ai assistant
 ## Install
 
+( we will soon make it all automated , so stay tuned! )
 ```sh 
 pip install pyttsx3
 
