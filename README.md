@@ -37,6 +37,8 @@ pip install pywin32
 pip install pywikihow
 
 pip install requests
+
+pip install bs4
 ```
 ## Usage
 
