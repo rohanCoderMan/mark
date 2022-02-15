@@ -248,4 +248,24 @@ def MainTasks():
             data = BS(r.text , 'html.parser')
             temp = data.find('div',class_ = 'BNeawe').text
             Say(f'the temperature is {temp}')
+         elif('shutdown' in query):
+            #take input from user to confirm shutdown or not
+            Say('are you sure?')
+            choice = input("Shutdown your computer? ( y or n ) : ") 
+            if choice == "y" or choice == "Y":
+                os.system("shutdown /s /t  1") # 1 is time that is for after what time we want to shutdown 
+   
+            else:
+                Say('canceled')
+        elif('restart' in query):
+            #take input from user to confirm shutdown or not
+            Say('are you sure?')
+            choice = input("restart your computer? ( y or n ) : ") 
+            if choice == "y" or choice == "Y":
+                os.system("shutdown /r /t  1") # 1 is time that is for after what time we want to shutdown 
+   
+            else:
+                Say('canceled')
+        elif('logout' in query):
+            os.system("shutdown /l /t  1")  
 MainTasks()
