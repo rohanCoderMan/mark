@@ -5,8 +5,11 @@
 
 > A ai assistant
 ## Install
+```sh
+setup.bat
+```
 
-( we will soon make it all automated , so stay tuned! )
+OR run these commands -
 ```sh 
 pip install pyttsx3
 
