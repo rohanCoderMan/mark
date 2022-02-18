@@ -1,4 +1,6 @@
-<h1 align="center">mark X🤖</h1>
+<h1 align="center">mark X</h1>
+![trans poster](https://user-images.githubusercontent.com/84845548/154637907-127f675d-a84b-4eb6-a40e-d86d2ce7420c.png)
+
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.5-blue.svg?cacheSeconds=2592000" />
 </p>
@@ -96,3 +98,4 @@ And more coming soon...
 ## Show your support
 
 Give a ⭐️ if this project helped you!
+![trans Byline](https://user-images.githubusercontent.com/84845548/154637950-3b2060ae-d022-404d-a7f5-eb1b2a027220.png)
