@@ -1,3 +1,4 @@
+# importing libs
 import pyttsx3
 import speech_recognition as sr
 import webbrowser
@@ -14,7 +15,7 @@ from pywikihow import search_wikihow
 import requests
 from bs4 import BeautifulSoup as BS
 
-# os.startfile('.\\Mark.bat')
+# setting up voice engine
 engine = pyttsx3.init('sapi5') 
 voices = engine.getProperty('voices') 
 engine.setProperty('voices',voices[0].id)
@@ -24,12 +25,12 @@ def Say(Text):
     print("     ")
     print(f'Mark X: {Text}')
     engine.say(text=Text)#Says the text
-    engine.runAndWait()#Waits for code to end
+    engine.runAndWait()#Waits for code to end , or it will auto shutdown 
     print("     ")
 
 def Listen():
     # print('listening....')
-    r= sr.Recognizer()
+    r= sr.Recognizer() # building recognizer
     with sr.Microphone(0) as source: # Microphone(0) means the deafault mic
         r.pause_threshold = 1
         audio = r.listen(source,0 ,5) # Giving mic as source , then 
@@ -38,7 +39,7 @@ def Listen():
 
     try:
         # print('recognizing....')
-        query = r.recognize_google(audio,language='en-in')
+        query = r.recognize_google(audio,language='en-in') #sending audio file to google , google makes it text and saves the text in {query
         print(f'you: {query}')
     except Exception as Error:
         return ''
@@ -47,6 +48,7 @@ def Listen():
 
 def MainTasks():
     Say('Mark is online!!')
+    # a bunch of functions....
     def Music():
         Say("what is the name of the music")
         musicName = Listen()
