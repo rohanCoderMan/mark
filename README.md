@@ -52,6 +52,25 @@ OR
 ```sh
 Mark.bat #for hotword detection
 ```
+## Features - 
+> hotword detection
+>Youtube search , google search
+>Open any app ,website
+>screenshot
+>music
+>wiki
+>locations
+>youtube , play , pause , mute unmute video etc
+>chrome , new tab , full screen , close tab etc 
+>jokes
+>dictionary - meanings , synonyms
+>alarm
+>how , who , what 
+>weather
+>date
+>time
+>shutdown restart logout
+And more!.....
 ## Author
 
 👤 **Rohan Kumar** , **Aarush tayal**
