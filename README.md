@@ -1,6 +1,6 @@
 <h1 align="center">mark X🤖</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.5-blue.svg?cacheSeconds=2592000" />
 </p>
 
 > A ai assistant
@@ -54,23 +54,40 @@ Mark.bat #for hotword detection
 ```
 ## Features - 
 > hotword detection
+
 >Youtube search , google search
+
 >Open any app ,website
+
 >screenshot
+
 >music
+
 >wiki
+
 >locations
+
 >youtube , play , pause , mute unmute video etc
+
 >chrome , new tab , full screen , close tab etc 
+
 >jokes
+
 >dictionary - meanings , synonyms
+
 >alarm
->how , who , what 
+
+>how , who , what
+ 
 >weather
+
 >date
+
 >time
+
 >shutdown restart logout
-And more!.....
+
+And more coming soon...
 ## Author
 
 👤 **Rohan Kumar** , **Aarush tayal**
