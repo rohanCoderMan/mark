@@ -54,7 +54,6 @@ def Listen():
 #All the tasks that mark can perform...just some tasks ok?
 def MainTasks():
     Say('Mark is online!!')
-    # a bunch of functions....
     def Music():
         Say("what is the name of the music")
         musicName = Listen()
@@ -102,6 +101,7 @@ def MainTasks():
                 Say('closing youtube automation')
                 break
 
+    #We have done that mark sleeps if there is sleep in query            
     while True:
         query = Listen()
         if("sleep" in query):
@@ -158,7 +158,7 @@ def MainTasks():
             get = pyjokes.get_joke()
             Say(get)
         #Sry, We couldn't get a module for maps
-        elif('where am i'in query):
+        elif('where am i','maps','place'in query):
             webbrowser.open('https://www.google.com/maps/')
         #Dictionary module helped us A LOT
         elif('meaning' in query):
