@@ -101,9 +101,11 @@ def MainTasks():
                 Say('closing youtube automation')
                 break
 
-    #We have done that mark sleeps if there is sleep in query            
+            
     while True:
         query = Listen()
+        
+         #We have done that mark sleeps if there is sleep in query   
         if("sleep" in query):
             Say("Okay sir....")
             Say('Just say Wake up to wake me up')
@@ -111,7 +113,7 @@ def MainTasks():
             break
         elif("hello" in query):
             Say("Hello sir!")
-        elif('youtube search' in query):
+        elif('youtube search' in query): #simple!
             Say("Ok sir...")
             query = query.replace("mark","")
             query = query.replace("youtube","")
@@ -119,14 +121,14 @@ def MainTasks():
             Say(f"searching for{query}")
             url = 'https://www.youtube.com/results?search_query=' + query
             webbrowser.open(url)
-        elif('google search' in query):
+        elif('google search' in query):#simple!
             Say("Ok sir...")
             query = query.replace("mark","")
             query = query.replace("google","")
             query = query.replace("search","")
             Say(f"searching for{query}")
             pywhatkit.search(query)
-        elif('website' in query):
+        elif('website' in query):#simple!
             Say("Ok sir launching...")
             query = query.replace("mark","")
             query = query.replace("website","")
@@ -135,7 +137,7 @@ def MainTasks():
             web = f"https://www.{query}.com"
             webbrowser.open(web)
         elif('music' in query):
-            Music()
+            Music()#just play it on utube
         elif('wikipedia' in query):
             Say("Ok sir...")
             query = query.replace("mark","")
@@ -158,7 +160,7 @@ def MainTasks():
             get = pyjokes.get_joke()
             Say(get)
         #Sry, We couldn't get a module for maps
-        elif('where am i','maps','place'in query):
+        elif('where am i'in query or 'maps'in query):
             webbrowser.open('https://www.google.com/maps/')
         #Dictionary module helped us A LOT
         elif('meaning' in query):
@@ -283,6 +285,5 @@ def MainTasks():
                 Say('canceled')
         elif('logout' in query):
             os.system("shutdown /l /t  3")  
-            #We faced an error so couldn't set up logout properly so we were lazy and will do it in the next update
 MainTasks()
 #Yeah those were some tasks only and we plan to add more....
