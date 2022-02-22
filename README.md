@@ -3,7 +3,7 @@
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.5-blue.svg?cacheSeconds=2592000" />
 </p>
-We are making a tutorial how to make this on your own!
+
 > A ai assistant
 ## Install
 ```sh
@@ -95,7 +95,7 @@ And more coming soon...
 * Github: [@rohanCoderMan](https://github.com/rohanCoderMan)
 * Github: [@Aarusht](https://github.com/Aarusht)
 ## Show your support
-
+>We are making a tutorial how to make this on your own!
 Give a ⭐️ if this project helped you!
 <center> 
 <img align="center" alt="poster" src="https://user-images.githubusercontent.com/84845548/154637950-3b2060ae-d022-404d-a7f5-eb1b2a027220.png" />
