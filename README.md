@@ -3,7 +3,7 @@
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.5-blue.svg?cacheSeconds=2592000" />
 </p>
-
+We are making a tutorial how to make this on your own!
 > A ai assistant
 ## Install
 ```sh
