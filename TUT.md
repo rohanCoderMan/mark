@@ -171,3 +171,5 @@ Brain()
 run the code , say hello and watch the bot say hello back!!!!🤯🤯🤯🤯🤯 
 
 ### 6 - add in more AND MORE FEATURES 😎😎😎
+
+(will add more soon!)
