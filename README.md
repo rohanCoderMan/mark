@@ -3,7 +3,7 @@
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.5-blue.svg?cacheSeconds=2592000" />
 </p>
-
+warnig - only works on python version 3.10.2 ( use anaconda or fresh installation) - ttps://www.python.org/downloads/release/python-3102/
 > A ai assistant
 ## Install
 ```sh
