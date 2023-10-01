@@ -1,4 +1,6 @@
 @echo off
+echo Installing open ai
+python -m pip install openai --user
 echo Installing pyttsx3
 python -m pip install pyttsx3 --user
 echo Installing SpeechRecognition 
