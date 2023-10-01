@@ -1,51 +1,54 @@
-print('Starting... ')
+# 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
+print("______________________________________________________________________________")
+print('MARK X - ai assistant BY rohan kumar')
 print('importing modules')
+import openai
+import pandas as pd
 import pyttsx3
-print('importing modules 1/15')
 import speech_recognition as sr
-print('importing modules 2/15')
 import webbrowser
-print('importing modules 3/15')
 import pywhatkit
-print('importing modules 4/15')
 import wikipedia
-print('importing modules 5/15')
 import pyautogui
-print('importing modules 6/15')
 import os
-print('importing modules 7/15')
 import pyjokes
-print('importing modules 8/15')
 from PyDictionary import PyDictionary as dicti
-print('importing modules 9/15')
 import datetime
-print('importing modules 10/15')
 from playsound import playsound as ps
-print('importing modules 11/18')
 import time as TiMeSus
-print('importing modules 12/18')
 from pywikihow import search_wikihow
-print('importing modules 13/15')
 import requests
-print('importing modules 14/15')
 from bs4 import BeautifulSoup as BS
-print('importing modules 15/15')
-
+print("import complete")
+print("starting app")
 os.startfile('.\\Mark.bat')
-print('started hotward detection')
-
+openai.api_key = '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'
 engine = pyttsx3.init('sapi5') 
 voices = engine.getProperty('voices') 
 engine.setProperty('voices',voices[0].id)
 engine.setProperty('rate',170)
-print('speech engine made')
+
+def get_completion(prompt, model="gpt-3.5-turbo"):
+
+    messages = [{"role": "user", "content": prompt}]
+
+    response = openai.ChatCompletion.create(
+
+        model=model,
+
+        messages=messages,
+
+        temperature=0,
+    )
+
+    return response.choices[0].message["content"]
+
 def Say(Text):
     print("     ")
     print(f'Mark X: {Text}')
     engine.say(text=Text)#Says the text
     engine.runAndWait()#Waits for code to end
     print("     ")
-print('speech - available')
 def Listen():
     # print('listening....')
     r= sr.Recognizer()
@@ -63,10 +66,21 @@ def Listen():
         return ''
     query = str(query)
     return query.lower()
-print('listening - available')
-print('Making brain...')
 def MainTasks():
-    Say('ALL SYSTEMS , ONLINE')
+    
+    query = Listen()
+    def ChatGPT(query):
+            oof = "I'm sorry, I cannot continue the text for you as I am an AI language model and I do not have access to personal information or the ability to generate personal experiences."
+            print("thinking....")
+            prompt = query
+            response = get_completion(prompt)
+            if response == oof:
+                MainTasks()
+            else:
+                Say(response)
+            
+   
+        
     def Music():
         Say("what is the name of the music")
         musicName = Listen()
@@ -108,14 +122,12 @@ def MainTasks():
                 pyautogui.press('k')
             elif('mute' in comm or 'unmute' in comm):
                 pyautogui.press('m')
-            elif('fullscreen' in comm):
+            elif('full screen' in comm):
                 pyautogui.press('f11')
             elif('exit' in comm):
                 Say('closing youtube automation')
                 break
-
     while True:
-        
         query = Listen()
         if("sleep" in query):
             Say("Okay sir....")
@@ -124,6 +136,9 @@ def MainTasks():
             Say('Mark is offline')
             print('task ended')
             break
+
+
+        ############# utility and fun ################
         elif("hello" in query):
             Say("Hello sir!")
         elif('youtube search' in query):
@@ -161,19 +176,16 @@ def MainTasks():
             query = query.replace("about","")
             wiki = wikipedia.summary(query,2)
             Say(f'according to wikipidea:{wiki}')
-        elif ('screenshot' in query):
-            pyautogui.hotkey('win','shift','s')
-        elif('open' in query):
-            OpenApps(query)  
-        elif('chrome automation' in query or 'chrome tools'in query):
-            ChromeAuto()
-        elif('youtube automation' in query or 'youtube tools'in query):
-            YoutubeAuto()
+
+ 
+       
         elif('joke' in query):
             get = pyjokes.get_joke()
             Say(get)
         elif('where am i'in query):
             webbrowser.open('https://www.google.com/maps/')
+
+            ################### dictionary ####################
         elif('meaning' in query):
             query = query.replace('what','')
             query = query.replace('is','')
@@ -202,6 +214,17 @@ def MainTasks():
 
             result = dicti.synonym(query)
             Say(f'the antonym of {query} is {result}')
+        
+        
+        ################### automation #####################
+        
+        
+        elif('chrome automation' in query or 'chrome tools'in query):
+            ChromeAuto()
+        elif('youtube automation' in query or 'youtube tools'in query):
+            YoutubeAuto()        
+        
+        
         elif('new window' in query):
                 pyautogui.hotkey('ctrl','n')
         elif('new tab' in query):
@@ -218,6 +241,11 @@ def MainTasks():
                 pyautogui.press('k')
         elif('mute' in query or 'unmute' in query):
                 pyautogui.press('m')
+       
+       
+       ################### clock ###################
+       
+       
         elif('alarm' in query):
             Say('enter the time (IN 24 hour)')
             time = input('enter the time: ')
@@ -239,6 +267,9 @@ def MainTasks():
             now = datetime.datetime.now()
             dt_string = now.strftime("%H:%M:%S")
             Say(f"the time is: {dt_string}")
+        
+        ###################direct query#######################
+        
         elif('how to'in query):
             Say('Surfing the internet')
             op = query.replace('Mark','')
@@ -264,6 +295,11 @@ def MainTasks():
             op = query.replace('me','')
             op = query.replace('who is','')
             pywhatkit.search(op)           
+       
+       ####################utility commands#################################
+
+
+
         elif('temperature' in query):
             search =  'temperature'
             url = f'https://www.google.com/search?q={search}'
@@ -295,9 +331,15 @@ def MainTasks():
             pyautogui.hotkey('winleft', 'down')
         elif('maximize' in query or 'maximise' in query ):
             pyautogui.hotkey('winleft', 'up')
-        
-
-print('brain - available')
-print('all api connected , running system startup sequence')
+        elif ('screenshot' in query):
+            pyautogui.hotkey('win','shift','s')
+        elif('open' in query):
+            OpenApps(query) 
+        else:
+            ChatGPT(query)
+            
+print("startup complete")
+print("______________________________________________________________________________")
+Say("System Ready")
 MainTasks()
 
