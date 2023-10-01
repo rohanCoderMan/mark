@@ -1,50 +1,15 @@
 <center> <img alt="poster" src="https://user-images.githubusercontent.com/84845548/154637907-127f675d-a84b-4eb6-a40e-d86d2ce7420c.png" />
 </center> 
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.5-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.2.0-blue.svg?cacheSeconds=2592000" />
 </p>
-warning - only works on python version 3.10.2 ( use anaconda or fresh installation) - ttps://www.python.org/downloads/release/python-3102/
->run these commands in command prompt-<br>
-
-```sh 
-pip install pyttsx3
-
-pip install SpeechRecognition
-
-pip install pyaudio
-
-pip install flask
-
-pip install pywhatkit
-
-pip install wikipidea
-
-pip install pyautogui
-
-pip install os
-
-pip install pyjokes
-
-pip install pydictionary
-
-pip install datetime
-
-pip install playsound
-
-pip install pywin32
-
-pip install pywikihow
-
-pip install requests
-
-pip install bs4
-```
-## Usage
+warning - only works on python version 3.10.2 ( use anaconda or fresh installation) - https://www.python.org/downloads/release/python-3102/ <br>
 
 ```sh
 python Mark.py #for direct launch
 ```
 ## Features - 
+```sh
 > hotword detection
 
 >Youtube search , google search
@@ -78,7 +43,7 @@ python Mark.py #for direct launch
 >time
 
 >shutdown restart logout
-
+```
 And more coming soon...
 ## Author
 
@@ -86,7 +51,6 @@ And more coming soon...
 * Github: [@rohanCoderMan](https://github.com/rohanCoderMan)
 * Github: [@Aarusht](https://github.com/Aarusht)
 ## Show your support
->We are making a tutorial how to make this on your own!
 Give a ⭐️ if this project helped you!
 <center> 
 <img align="center" alt="poster" src="https://user-images.githubusercontent.com/84845548/154637950-3b2060ae-d022-404d-a7f5-eb1b2a027220.png" />
